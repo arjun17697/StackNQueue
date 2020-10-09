@@ -29,6 +29,7 @@ public class StackTest {
 		obj.push(70);
 		obj.push(30); 
 		obj.push(56);
-		int test1 = obj.pop();
-		assertEquals(56, test1);
+		obj.pop();
+		int test1 = obj.peek();
+		assertEquals(30, test1);
 	}}

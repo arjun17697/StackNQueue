@@ -22,5 +22,16 @@ public class QueueTest {
 		int test1 = obj1.peek();
 		assertEquals(70, test1);
 	}
-
+	@Test
+	public void FirstNumberEnqueueShouldDequeueFirst() {
+		// create Object of Implementing class 
+		QueueMain obj1 = new QueueMain(); 
+		// insert Queue value 
+		obj1.enqueue(70);
+		obj1.enqueue(30);
+		obj1.enqueue(56);
+		obj1.dequeue();
+		int test1 = obj1.peek();
+		assertEquals(30, test1);
+	}
 }

@@ -32,6 +32,22 @@ public class QueueMain {
 		this.rear.next = temp;
 		this.rear = temp;
 	}
+//Dequeue	
+	public void dequeue() 
+    { 
+        // If queue is empty, return NULL. 
+        if (isEmpty()) 
+            return; 
+  
+        // Store previous front and move front one node ahead 
+        NodeMain temp = this.front; 
+        this.front = this.front.next; 
+  
+        // If front becomes NULL, then change rear also as NULL 
+        if (this.front == null) 
+            this.rear = null; 
+    } 
+
 //Method to check if the queue is empty	isEmpty()
 	public boolean isEmpty() {
 		return rear == null;
@@ -46,6 +62,8 @@ public class QueueMain {
 			return -1;
 		}
 	}
+	
+
 
 public static void main(String[] args) {
 	System.out.println("Welcome to Queue App");
