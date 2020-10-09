@@ -1,26 +1,26 @@
 package main;
 
 //Linked List Part
-class Node {
+class NodeMain {
 	int key;
-	Node next;
+	NodeMain next;
 
-	public Node(int key) {
+	public NodeMain(int key) {
 		this.key = key;
 		this.next = null;
 	}
 }
 //A class to represent a queue 
-class Queue {
-	Node front, rear;
+public class QueueMain {
+	NodeMain front, rear;
 
-	public Queue() {
+	public QueueMain() {
 		this.front = this.rear = null;
 	}
 
 // Enqueue
-	void enqueue(int key) {
-		Node temp = new Node(key);
+	public void enqueue(int key) {
+		NodeMain temp = new NodeMain(key);
 
 		// If queue is empty, then new node is front and rear both
 		if (isEmpty()) {
@@ -36,26 +36,18 @@ class Queue {
 	public boolean isEmpty() {
 		return rear == null;
 	}
-
-// Dequeue
-	void dequeue() {
-		// If queue is empty
-		if (isEmpty())
-			return;
-
-		// Store previous front and move front one node ahead
-		Node temp = this.front;
-		this.front = this.front.next;
-
-		// If front becomes NULL, then change rear also as NULL
-		if (this.front == null)
-			this.rear = null;
+	
+	public int peek() {
+		// check for empty stack
+		if (!isEmpty()) {
+			return front.key;
+		} else {
+			System.out.println("Stack is empty");
+			return -1;
+		}
 	}
 
-
-
-
-	public static void main(String[] args) {
-			
-	}
+public static void main(String[] args) {
+	System.out.println("Welcome to Queue App");
+			}
 }
