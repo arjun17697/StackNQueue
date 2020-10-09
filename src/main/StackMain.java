@@ -3,12 +3,12 @@ package main;
 
 import static java.lang.System.exit;
 
-public class StackNQueueMain {
+public class StackMain {
 	public static void main(String[] args) {
 		System.out.println("Welcome to StackNQueueApp");
 		}
 
-	public String msg;
+
 
 // A linked list node 
 	private class Node {
@@ -17,13 +17,12 @@ public class StackNQueueMain {
 	}
 
 	Node top;
-
 	// constructor
-	public StackNQueueMain() {
+	public StackMain() {
 		this.top = null;
 	}
 
-//Push Method
+//Push Method for Stack
 	public void push(int x) {
 		Node temp = new Node();
 		if (temp == null) {
@@ -35,7 +34,7 @@ public class StackNQueueMain {
 		top = temp;
 	}
 
-	// Method to check if the stack is empty or not
+// Method to check if the stack is empty or not
 	public boolean isEmpty() {
 		return top == null;
 	}
@@ -79,5 +78,7 @@ public class StackNQueueMain {
 		top = (top).link;
 		
 	}
+	
+
 }
 
